@@ -11,10 +11,10 @@ import (
 
 const (
 	// DefaultOutputFileDot is the .dot file location to save the sitemap graph information to.
-	DefaultOutputFileDot = "../sitemap.dot"
+	DefaultOutputFileDot = "sitemap.dot"
 
 	// DefaultOutputFileSvg is the .svg file location to save the sitemap graph to.
-	DefaultOutputFileSvg = "../sitemap.svg"
+	DefaultOutputFileSvg = "sitemap.svg"
 )
 
 // Text renders the given sitemap as a list of pages and links found.
