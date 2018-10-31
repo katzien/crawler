@@ -12,7 +12,7 @@ import (
 
 const (
 	// DefaultURL is the default URL which will be crawled if no url flag has been specified.
-	DefaultURL = "https://google.com"
+	DefaultURL = "https://www.google.com"
 
 	// DefaultDepth is the default max crawling depth if no depth flag has been specified.
 	DefaultDepth = 2
