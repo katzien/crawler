@@ -14,8 +14,6 @@ You can specify the following options:
 
 `-graph` Renders the sitemap as a graph saved to an .svg file rather than as text on the screen.
 
-❗️Graphviz (dot) is required for this to work.
-
 `-timeout` Max allowed crawling time in seconds (0 for unlimited; defaults to 1m0s).
 
 `-url` Full URL of the website to be crawled, e.g. https://google.com (defaults to https://www.google.com if not specified).
@@ -101,6 +99,27 @@ https://www.google.com/services -> https://www.google.com/intl/en/analytics/data
 
 Done!
 ```
+
+## Generating the sitemap
+
+❗️Graphviz (dot) is required for this to work.
+
+Run `go run cmd/main.go -graph` to render the sitemap data as a graph. For example:
+
+```
+$ go run cmd/main.go -graph
+Crawling https://www.google.com up to 2 level(s) deep (timeout 1m0s).
+2018/10/31 23:37:10 parsing https://www.google.com/intl/en/ads returned an error: Get https://ads.google.com/intl/en/home/: URL is outside the starting domain, ignoring
+2018/10/31 23:37:10 parsing https://www.google.com/language_tools returned an error: Get https://translate.google.com/: URL is outside the starting domain, ignoring
+Sitemap graph file saved in sitemap.svg.
+Done!
+```
+
+produces the following image:
+
+![sitemap.svg](https://github.com/katzien/crawler/blob/master/examples/sitemap.svg)
+
+Note: the graph data in .dot format is saved as [`sitemap.dot`](https://github.com/katzien/crawler/blob/master/examples/sitemap.dot).
 
 ## Testing
 
