@@ -10,13 +10,15 @@ Run `go run cmd/main.go` to kick off crawling.
 
 You can specify the following options:
 
-`-depth` Number of nested levels to parse (0 for unlimited; defaults to 2)
+`-depth` Number of nested levels to parse (0 for unlimited; defaults to 2).
 
-`-graph` Renders the sitemap as a graph saved to an .svg file rather than as text on the screen. Graphviz (dot) is required for this to work.
+`-graph` Renders the sitemap as a graph saved to an .svg file rather than as text on the screen.
 
-`-timeout` Max allowed crawling time in seconds (0 for unlimited; defaults to 1m0s)
+❗️Graphviz (dot) is required for this to work.
 
-`-url` Full URL of the website to be crawled, e.g. https://google.com (defaults to https://www.google.com if not specified)
+`-timeout` Max allowed crawling time in seconds (0 for unlimited; defaults to 1m0s).
+
+`-url` Full URL of the website to be crawled, e.g. https://google.com (defaults to https://www.google.com if not specified).
 
 ### Example output:
 
